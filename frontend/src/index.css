@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    --color-villain-darker: #020202;
+    --color-villain-dark: #050505;
+    --color-villain-surface: #0a0a0a;
+    --color-villain-border: #1a1a1a;
+    --color-villain-text: #e0e0e0;
+    --color-villain-muted: #666666;
+
+    --color-emerald-glow: #00ff9d;
+    --color-purple-glow: #8b5cf6;
+    --color-red-glow: #ff3333;
+
+    --animate-blob: blob 7s infinite;
+    --animate-glitch: glitch 2s infinite;
+    --animate-scanline: scanline 3s linear infinite;
+}
+
+@keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes glitch {
+    0% { clip-path: inset(40% 0 61% 0); transform: translate(-2px, 2px); }
+    20% { clip-path: inset(92% 0 1% 0); transform: translate(1px, -1px); }
+    40% { clip-path: inset(43% 0 1% 0); transform: translate(-1px, 2px); }
+    60% { clip-path: inset(25% 0 58% 0); transform: translate(2px, 1px); }
+    80% { clip-path: inset(54% 0 7% 0); transform: translate(-2px, -1px); }
+    100% { clip-path: inset(58% 0 43% 0); transform: translate(1px, 2px); }
+}
+
+@keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #1a1a1a #050505;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #00ff9d33;
+}
+
+::selection {
+    background: rgba(0, 255, 157, 0.3);
+    color: #00ff9d;
+}
+
+body {
+    background: #050505;
+    color: #e0e0e0;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
